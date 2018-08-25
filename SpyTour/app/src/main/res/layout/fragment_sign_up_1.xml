@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignUp.SignUp_1Fragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="40"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="320"
+        android:orientation="horizontal">
+        
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="55"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="250"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="45"
+                android:orientation="vertical"
+                android:background="@drawable/border">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:textStyle="normal"
+                    android:background="@null"
+                    android:hint="이름을 입력해주세요"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="45" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="55"
+                android:orientation="vertical"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:id="@+id/Select_Jender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="성별을 선택해주세요"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup_Jender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/Men"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:fontFamily="@font/roboto_light"
+                        android:onClick="checkButton"
+                        android:text="남성"
+                        android:textSize="10dp" />
+
+                    <RadioButton
+                        android:id="@+id/Woman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/roboto_light"
+                        android:onClick="checkButton"
+                        android:text="여성"
+                        android:textSize="10dp" />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="35" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="105"
+                android:orientation="vertical"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:id="@+id/Select_Category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="카테고리를 선택해주세요"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/ChooseCategory">
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup_Category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@+id/ChooseCategory"
+                            android:orientation="vertical">
+
+                            <TableRow>
+
+                                <RadioButton
+                                    android:id="@+id/Food"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:checked="true"
+                                    android:fontFamily="@font/roboto_light"
+                                    android:onClick="checkButton"
+                                    android:text="식당" />
+
+                                <RadioButton
+                                    android:id="@+id/Hospital"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/roboto_light"
+                                    android:onClick="checkButton"
+                                    android:text="의료시설" />
+
+                                <RadioButton
+                                    android:id="@+id/Spots"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:onClick="checkButton"
+                                    android:text="레저/스포츠" />
+                            </TableRow>
+
+                            <TableRow>
+
+                                <RadioButton
+                                    android:id="@+id/Drink"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="checkButton"
+                                    android:text="주점" />
+
+                                <RadioButton
+                                    android:id="@+id/Sleep"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="checkButton"
+                                    android:text="숙박 업소" />
+
+                                <RadioButton
+                                    android:id="@+id/Park"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:onClick="checkButton"
+                                    android:text="놀이공원" />
+                            </TableRow>
+
+
+
+                        </RadioGroup>
+
+                    </TableLayout>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="20" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="45">
+
+                <Button
+                    android:id="@+id/button_next_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/round_textedit"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Next"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="55"/>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="85"/>
+
+
+
+
+</LinearLayout>
